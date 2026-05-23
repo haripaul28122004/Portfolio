@@ -42,8 +42,8 @@
                     Fresher MCA student eager to make an impact in the tech world.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Hire Me</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    <a href="#contact" class="btn btn-primary" id="hireMeBtn">Hire Me</a>
+                    <a href="#contact" class="btn btn-secondary" id="contactMeBtn">Contact Me</a>
                 </div>
                 <div class="scroll-indicator">
                     <span>Scroll to explore</span>
@@ -474,15 +474,22 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/haripaul28122004@gmail.com" method="POST">
+                    <!-- Honeypot spam protection -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Disable captcha for frictionless user experience -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Custom subject line -->
+                    <input type="hidden" name="_subject" id="formSubject" value="New Portfolio Inquiry!">
+
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>

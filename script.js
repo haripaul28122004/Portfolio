@@ -98,22 +98,23 @@ revealElements.forEach(el => {
 });
 
 // ===========================
-// Contact Form Handling
+// Contact Form & Button Handling
 // ===========================
 
 const contactForm = document.getElementById('contactForm');
+const hireMeBtn = document.getElementById('hireMeBtn');
+const contactMeBtn = document.getElementById('contactMeBtn');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
         // Get form values
-        const name = contactForm.querySelector('input[type="text"]').value;
-        const email = contactForm.querySelector('input[type="email"]').value;
-        const message = contactForm.querySelector('textarea').value;
+        const name = contactForm.querySelector('input[name="name"]').value;
+        const email = contactForm.querySelector('input[name="email"]').value;
+        const message = contactForm.querySelector('textarea[name="message"]').value;
         
         // Validate form
         if (!name || !email || !message) {
+            e.preventDefault();
             alert('Please fill in all fields');
             return;
         }
@@ -121,22 +122,50 @@ if (contactForm) {
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert('Please enter a valid email');
             return;
         }
         
-        // Create mailto link (for demonstration)
-        // In production, this would send to a backend service
-        const mailtoLink = `mailto:haripaul28122004@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0A%0AMessage:%0A${message}`;
-        
-        // Show success message
-        alert('Thank you for your message! I will get back to you soon.');
-        
-        // Reset form
-        contactForm.reset();
-        
-        // Optional: Uncomment the line below to actually open email client
-        // window.location.href = mailtoLink;
+        // Form will submit naturally to FormSubmit.co
+    });
+}
+
+if (hireMeBtn) {
+    hireMeBtn.addEventListener('click', () => {
+        const formSubject = document.getElementById('formSubject');
+        if (formSubject) {
+            formSubject.value = 'Hiring Inquiry';
+        }
+        if (contactForm) {
+            const messageTextarea = contactForm.querySelector('textarea[name="message"]');
+            if (messageTextarea) {
+                messageTextarea.value = "Hi Hari, I would like to hire you for a project!";
+            }
+            const nameInput = contactForm.querySelector('input[name="name"]');
+            if (nameInput) {
+                setTimeout(() => nameInput.focus(), 800); // Focus after smooth scroll completes
+            }
+        }
+    });
+}
+
+if (contactMeBtn) {
+    contactMeBtn.addEventListener('click', () => {
+        const formSubject = document.getElementById('formSubject');
+        if (formSubject) {
+            formSubject.value = 'Portfolio Feedback / Contact';
+        }
+        if (contactForm) {
+            const messageTextarea = contactForm.querySelector('textarea[name="message"]');
+            if (messageTextarea) {
+                messageTextarea.value = '';
+            }
+            const nameInput = contactForm.querySelector('input[name="name"]');
+            if (nameInput) {
+                setTimeout(() => nameInput.focus(), 800); // Focus after smooth scroll completes
+            }
+        }
     });
 }
 
