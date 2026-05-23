@@ -297,7 +297,7 @@ const certData = {
     cert2: {
         image: 'https://via.placeholder.com/800x600/a855f7/ffffff?text=Python+Development+Internship',
         title: 'Python Development Internship',
-        org: 'Frontierfox',
+        org: 'FrontierWox Tech Private Limited',
         year: '2026',
         description: 'Worked on Python development projects and gained practical experience in backend programming, application logic, and software development concepts.'
     },
