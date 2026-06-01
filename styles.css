@@ -1406,6 +1406,15 @@ body {
     margin-bottom: 2rem;
 }
 
+.resume-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
 /* ===========================
    Contact Section
    =========================== */

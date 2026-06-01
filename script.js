@@ -518,9 +518,9 @@ scrollTopBtn.addEventListener('mouseout', () => {
 });
 
 // ===========================
-// Download Resume Handler
+// Download Resume Handler (Handled natively by HTML links)
 // ===========================
-
+/*
 const downloadBtn = document.querySelector('.resume-section .btn-primary');
 
 if (downloadBtn) {
@@ -528,6 +528,7 @@ if (downloadBtn) {
         window.location.href = 'resume.pdf';
     });
 }
+*/
 
 // ===========================
 // Keyboard Navigation
