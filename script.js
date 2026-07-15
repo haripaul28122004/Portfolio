@@ -295,7 +295,7 @@ const certData = {
         description: 'Completed internship training in basic Python programming, problem-solving, and application development fundamentals.'
     },
     cert2: {
-        image: 'https://via.placeholder.com/800x600/a855f7/ffffff?text=Python+Development+Internship',
+        image: 'frontiercomplete.png',
         title: 'Python Development Internship',
         org: 'FrontierWox Tech Private Limited',
         year: '2026',
@@ -309,11 +309,18 @@ const certData = {
         description: 'Participated and emerged as a Pre-finalist in Project: AI Teaching Assistant for Personalized Learning at PITCH HEST 2026 — a National Level Intercollegiate Innovation Challenge organized by the Department of Computer Science, St. Joseph\'s College, Tiruchirappalli, held on 5th & 6th February 2026.'
     },
     cert4: {
-        image: 'https://via.placeholder.com/800x600/f97316/ffffff?text=National+Conference',
+        image: 'International_Conference.jpg',
         title: 'National Conference Presentation',
         org: 'National Level Conference',
         year: '2025',
         description: 'Presented technical concepts and participated in a national-level conference event.'
+    },
+    cert5: {
+        image: 'skill.png',
+        title: 'Soft Skill Development',
+        org: 'NPTEL Online Certification (IIT Kharagpur)',
+        year: '2026',
+        description: 'Successfully completed the NPTEL Soft Skill Development course with a score of 70%.'
     }
 };
 
