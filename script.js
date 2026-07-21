@@ -321,6 +321,13 @@ const certData = {
         org: 'NPTEL Online Certification (IIT Kharagpur)',
         year: '2026',
         description: 'Successfully completed the NPTEL Soft Skill Development course with a score of 70%.'
+    },
+    cert6: {
+        image: 'ai_fundamentals.jpg',
+        title: 'AI Fundamentals: Foundations for Understanding AI',
+        org: 'IBM SkillsBuild',
+        year: '2026',
+        description: 'Successfully completed the IBM SkillsBuild course on AI Fundamentals: Foundations for Understanding AI.'
     }
 };
 
